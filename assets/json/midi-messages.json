@@ -1,0 +1,27 @@
+{
+    "MIDI_Messages": {
+      "Channel_Messages": {
+            "Note_Off": 128,
+            "Note_On": 144,
+            "Polyphonic_Key_Pressure": 160,
+            "Control_Change": 176,
+            "Program_Change": 192,
+            "Channel_Aftertouch": 208,
+            "Pitch_Bend": 224
+    },
+    "System_Messages": {
+        "System_Exclusive": 240,
+        "MIDI_Time_Code": 241,
+        "Song_Position_Pointer": 242,
+        "Song_Select": 243,
+        "Tune_Request": 246,
+        "End_Of_Exclusive": 247,
+        "Timing_Clock": 248,
+        "Start": 250,
+        "Continue": 251,
+        "Stop": 252,
+        "Active_Sensing": 254,
+        "System_Reset": 255
+      }
+    }
+  }

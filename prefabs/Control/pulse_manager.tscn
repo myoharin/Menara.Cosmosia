@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://cyc8f41ap7ad2"]
+
+[ext_resource type="Theme" uid="uid://df5eh344xpksh" path="res://assets/themes/control_theme.tres" id="1_o3el2"]
+[ext_resource type="Script" path="res://src/pulse_manager.cs" id="2_l7vcr"]
+[ext_resource type="PackedScene" uid="uid://heoac0ctf5dh" path="res://prefabs/Control/pulse_player.tscn" id="2_om3q7"]
+[ext_resource type="PackedScene" uid="uid://bnq563al7j0t0" path="res://prefabs/Control/midi_pulse_input_indicator.tscn" id="4_h6en0"]
+[ext_resource type="Script" path="res://src/midi_event_handler.cs" id="5_7c1ar"]
+
+[node name="PulseManager" type="VBoxContainer" node_paths=PackedStringArray("AddPulse", "DeletePulse", "MidiIndicatorContainer", "MidiEventHandler")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1123.0
+offset_top = 26.0
+offset_right = -27.0
+offset_bottom = 285.0
+grow_horizontal = 0
+theme = ExtResource("1_o3el2")
+script = ExtResource("2_l7vcr")
+AddPulse = NodePath("PulsePlayerEditor/AddPulse")
+DeletePulse = NodePath("PulsePlayerEditor/DeleteAllPulse")
+PulsePlayerScene = ExtResource("2_om3q7")
+MidiPulseInputIndicatorScene = ExtResource("4_h6en0")
+MidiIndicatorContainer = NodePath("MidiIndicators")
+MidiEventHandler = NodePath("MidiEvenHandler")
+
+[node name="PulsePlayerEditor" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme = ExtResource("1_o3el2")
+alignment = 2
+
+[node name="AddPulse" type="Button" parent="PulsePlayerEditor"]
+custom_minimum_size = Vector2(95.4, 0)
+layout_mode = 2
+theme = ExtResource("1_o3el2")
+theme_override_font_sizes/font_size = 27
+text = "Add"
+
+[node name="DeleteAllPulse" type="Button" parent="PulsePlayerEditor"]
+custom_minimum_size = Vector2(149.155, 0)
+layout_mode = 2
+theme = ExtResource("1_o3el2")
+theme_override_font_sizes/font_size = 27
+text = "Delete All"
+
+[node name="MidiIndicators" type="VBoxContainer" parent="."]
+layout_mode = 2
+alignment = 2
+
+[node name="MidiEvenHandler" type="Node" parent="." node_paths=PackedStringArray("PulseManager")]
+script = ExtResource("5_7c1ar")
+PulseManager = NodePath("..")
+
+[connection signal="button_up" from="PulsePlayerEditor/AddPulse" to="." method="_on_add_pulse_button_up"]
+[connection signal="button_up" from="PulsePlayerEditor/DeleteAllPulse" to="." method="_on_delete_pulse_button_up"]

@@ -1,0 +1,272 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7t1yo586f0ni"]
+
+[ext_resource type="Script" path="res://src/ResonatorParametersEditor.cs" id="1_q7tkr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dqlcs"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_hy3m2"]
+font_size = 20
+
+[node name="ResonatorParametersEditor" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 490.0
+offset_bottom = 590.0
+script = ExtResource("1_q7tkr")
+metadata/_edit_vertical_guides_ = [-160.0]
+
+[node name="ApplyParameterChanges" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_right = 475.0
+offset_bottom = 31.0
+
+[node name="ApplyChanges" type="Button" parent="ApplyParameterChanges"]
+layout_mode = 2
+text = "Apply Changes"
+
+[node name="RevertChanges" type="Button" parent="ApplyParameterChanges"]
+layout_mode = 2
+text = "Revert Changes"
+
+[node name="BaseParameters" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_top = 35.0
+offset_right = 475.0
+offset_bottom = 319.0
+
+[node name="ParameterName" type="VBoxContainer" parent="BaseParameters"]
+layout_mode = 2
+
+[node name="ResonatorParameterID" type="Label" parent="BaseParameters/ParameterName"]
+custom_minimum_size = Vector2(341, 32)
+layout_mode = 2
+text = "ResonatorParameterID"
+label_settings = SubResource("LabelSettings_dqlcs")
+vertical_alignment = 1
+
+[node name="Origin" type="Label" parent="BaseParameters/ParameterName"]
+custom_minimum_size = Vector2(341, 32)
+layout_mode = 2
+text = "Origin"
+label_settings = SubResource("LabelSettings_dqlcs")
+vertical_alignment = 1
+
+[node name="OriginIntensity" type="Label" parent="BaseParameters/ParameterName"]
+custom_minimum_size = Vector2(341, 32)
+layout_mode = 2
+text = "OriginIntensity"
+label_settings = SubResource("LabelSettings_dqlcs")
+vertical_alignment = 1
+
+[node name="MaxIdyllAmount" type="Label" parent="BaseParameters/ParameterName"]
+custom_minimum_size = Vector2(341, 32)
+layout_mode = 2
+text = "MaxIdyllAmount"
+label_settings = SubResource("LabelSettings_dqlcs")
+vertical_alignment = 1
+
+[node name="CriticalEffectDurationThreshold" type="Label" parent="BaseParameters/ParameterName"]
+custom_minimum_size = Vector2(341, 32)
+layout_mode = 2
+text = "CriticalEffectDurationThreshold"
+label_settings = SubResource("LabelSettings_dqlcs")
+vertical_alignment = 1
+
+[node name="InflowLimit" type="Label" parent="BaseParameters/ParameterName"]
+custom_minimum_size = Vector2(341, 32)
+layout_mode = 2
+text = "InflowLimit"
+label_settings = SubResource("LabelSettings_dqlcs")
+vertical_alignment = 1
+
+[node name="OutflowLimit" type="Label" parent="BaseParameters/ParameterName"]
+custom_minimum_size = Vector2(341, 32)
+layout_mode = 2
+text = "OutflowLimit"
+label_settings = SubResource("LabelSettings_dqlcs")
+vertical_alignment = 1
+
+[node name="OverflowLimit" type="Label" parent="BaseParameters/ParameterName"]
+custom_minimum_size = Vector2(341, 32)
+layout_mode = 2
+text = "OverflowLimit"
+label_settings = SubResource("LabelSettings_dqlcs")
+vertical_alignment = 1
+
+[node name="ParameterValue" type="VBoxContainer" parent="BaseParameters"]
+layout_mode = 2
+
+[node name="ResonatorParameterIDValue" type="LineEdit" parent="BaseParameters/ParameterValue"]
+custom_minimum_size = Vector2(130, 32)
+layout_mode = 2
+draw_control_chars = true
+
+[node name="OriginValue" type="LineEdit" parent="BaseParameters/ParameterValue"]
+custom_minimum_size = Vector2(130, 32)
+layout_mode = 2
+draw_control_chars = true
+
+[node name="OriginIntensityValue" type="LineEdit" parent="BaseParameters/ParameterValue"]
+custom_minimum_size = Vector2(130, 32)
+layout_mode = 2
+
+[node name="MaxIdyllAmountValue" type="LineEdit" parent="BaseParameters/ParameterValue"]
+custom_minimum_size = Vector2(130, 32)
+layout_mode = 2
+
+[node name="CriticalEffectDurationThresholdValue" type="LineEdit" parent="BaseParameters/ParameterValue"]
+custom_minimum_size = Vector2(130, 32)
+layout_mode = 2
+
+[node name="InflowLimitValue" type="LineEdit" parent="BaseParameters/ParameterValue"]
+custom_minimum_size = Vector2(130, 32)
+layout_mode = 2
+
+[node name="OutflowLimitValue" type="LineEdit" parent="BaseParameters/ParameterValue"]
+custom_minimum_size = Vector2(130, 32)
+layout_mode = 2
+
+[node name="OverflowLimitValue" type="LineEdit" parent="BaseParameters/ParameterValue"]
+custom_minimum_size = Vector2(130, 32)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(500, 270)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.032
+anchor_top = -0.026
+anchor_right = -0.032
+anchor_bottom = -0.026
+offset_left = 0.200001
+offset_top = 356.95
+offset_right = 500.2
+offset_bottom = 656.95
+
+[node name="Channel" type="HBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 11.0
+offset_right = 490.0
+offset_bottom = 259.0
+
+[node name="ParameterName" type="VBoxContainer" parent="Panel/Channel"]
+layout_mode = 2
+
+[node name="ChannelID" type="Label" parent="Panel/Channel/ParameterName"]
+custom_minimum_size = Vector2(290, 32)
+layout_mode = 2
+text = "Channel ID"
+label_settings = SubResource("LabelSettings_hy3m2")
+vertical_alignment = 1
+
+[node name="InflowMultiplier" type="Label" parent="Panel/Channel/ParameterName"]
+custom_minimum_size = Vector2(290, 32)
+layout_mode = 2
+text = "InflowMultiplier"
+label_settings = SubResource("LabelSettings_hy3m2")
+vertical_alignment = 1
+
+[node name="OutflowMultiplier" type="Label" parent="Panel/Channel/ParameterName"]
+custom_minimum_size = Vector2(290, 32)
+layout_mode = 2
+text = "OutflowMultiplier"
+label_settings = SubResource("LabelSettings_hy3m2")
+vertical_alignment = 1
+
+[node name="OverflowMultiplier" type="Label" parent="Panel/Channel/ParameterName"]
+custom_minimum_size = Vector2(290, 32)
+layout_mode = 2
+text = "OverflowMultiplier"
+label_settings = SubResource("LabelSettings_hy3m2")
+vertical_alignment = 1
+
+[node name="InflowEffect" type="Label" parent="Panel/Channel/ParameterName"]
+custom_minimum_size = Vector2(290, 32)
+layout_mode = 2
+text = "InflowEffect"
+label_settings = SubResource("LabelSettings_hy3m2")
+vertical_alignment = 1
+
+[node name="OutflowEffect" type="Label" parent="Panel/Channel/ParameterName"]
+custom_minimum_size = Vector2(290, 32)
+layout_mode = 2
+text = "OutflowEffect"
+label_settings = SubResource("LabelSettings_hy3m2")
+vertical_alignment = 1
+
+[node name="OverflowEffect" type="Label" parent="Panel/Channel/ParameterName"]
+custom_minimum_size = Vector2(290, 32)
+layout_mode = 2
+text = "OverflowEffect"
+label_settings = SubResource("LabelSettings_hy3m2")
+vertical_alignment = 1
+
+[node name="ParameterValue" type="VBoxContainer" parent="Panel/Channel"]
+layout_mode = 2
+
+[node name="ChannelID" type="OptionButton" parent="Panel/Channel/ParameterValue"]
+custom_minimum_size = Vector2(115, 32)
+layout_mode = 2
+selected = 0
+allow_reselect = true
+item_count = 15
+popup/item_0/text = "N2N_Octave"
+popup/item_1/text = "N2N_Second"
+popup/item_1/id = 1
+popup/item_2/text = "N2N_Diminished"
+popup/item_2/id = 2
+popup/item_3/text = "N2N_Augmented"
+popup/item_3/id = 3
+popup/item_4/text = "N2N_Fourth"
+popup/item_4/id = 4
+popup/item_5/text = "N2N_Fifth"
+popup/item_5/id = 5
+popup/item_6/text = "N2N_Tritone"
+popup/item_6/id = 6
+popup/item_7/text = "N2N_Seventh"
+popup/item_7/id = 7
+popup/item_8/text = "N2R_Octave"
+popup/item_8/id = 8
+popup/item_9/text = "N2R_Fifth"
+popup/item_9/id = 9
+popup/item_10/text = "N2R_Fourth"
+popup/item_10/id = 10
+popup/item_11/text = "N2R_FF"
+popup/item_11/id = 11
+popup/item_12/text = "N2R_FifthOctave"
+popup/item_12/id = 12
+popup/item_13/text = "N2R_FourthOctave"
+popup/item_13/id = 13
+popup/item_14/text = "Null"
+popup/item_14/id = 255
+
+[node name="InflowMultiplier" type="LineEdit" parent="Panel/Channel/ParameterValue"]
+custom_minimum_size = Vector2(115, 32)
+layout_mode = 2
+
+[node name="OutflowMultiplier" type="LineEdit" parent="Panel/Channel/ParameterValue"]
+custom_minimum_size = Vector2(115, 32)
+layout_mode = 2
+
+[node name="OverflowMultiplier" type="LineEdit" parent="Panel/Channel/ParameterValue"]
+custom_minimum_size = Vector2(115, 32)
+layout_mode = 2
+
+[node name="InflowEffect" type="LineEdit" parent="Panel/Channel/ParameterValue"]
+custom_minimum_size = Vector2(115, 32)
+layout_mode = 2
+
+[node name="OutflowEffect" type="LineEdit" parent="Panel/Channel/ParameterValue"]
+custom_minimum_size = Vector2(115, 32)
+layout_mode = 2
+
+[node name="OverflowEffect" type="LineEdit" parent="Panel/Channel/ParameterValue"]
+custom_minimum_size = Vector2(115, 32)
+layout_mode = 2
+
+[connection signal="button_down" from="ApplyParameterChanges/ApplyChanges" to="." method="_on_apply_changes_button_down"]
+[connection signal="button_down" from="ApplyParameterChanges/RevertChanges" to="." method="_on_revert_changes_button_down"]

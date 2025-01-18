@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://5ipmd3fx8j88"]
+
+[ext_resource type="Script" path="res://src/frontend_manager_script.cs" id="2_2biiu"]
+[ext_resource type="Script" path="res://src/menara_script.cs" id="2_idbah"]
+[ext_resource type="PackedScene" uid="uid://b7t1yo586f0ni" path="res://prefabs/Control/ResonatorParametersEditor.tscn" id="3_33tly"]
+[ext_resource type="PackedScene" uid="uid://cyc8f41ap7ad2" path="res://prefabs/Control/pulse_manager.tscn" id="3_tjq5o"]
+[ext_resource type="Shader" path="res://assets/shaders/mandala.gdshader" id="4_3tl8d"]
+[ext_resource type="Texture2D" uid="uid://cw86a0jsdkkvh" path="res://assets/image/shapes/square_sea green_#40bf60.png" id="5_6dnft"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ib3g4"]
+shader = ExtResource("4_3tl8d")
+shader_parameter/divisions = 12
+shader_parameter/radius = 0.3
+shader_parameter/activeMasks = PackedInt32Array(3, 2, 8, 12)
+
+[node name="Scene" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_2biiu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Control"]
+
+[node name="ResonatorParametersEditor" parent="Control/CanvasLayer" instance=ExtResource("3_33tly")]
+offset_top = 20.0
+offset_bottom = 595.0
+CurrentParameter = 244215
+
+[node name="PulseManager" parent="Control/CanvasLayer" node_paths=PackedStringArray("Menara") instance=ExtResource("3_tjq5o")]
+offset_left = -880.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 261.0
+Menara = NodePath("../../../Menara")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/CanvasLayer"]
+
+[node name="ResonatorDisplay" type="Node2D" parent="Control"]
+position = Vector2(551, 324)
+
+[node name="MandalaVisualizer" type="Sprite2D" parent="Control/ResonatorDisplay"]
+material = SubResource("ShaderMaterial_ib3g4")
+scale = Vector2(1.34, 1.34)
+texture = ExtResource("5_6dnft")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Menara" type="Node" parent="." node_paths=PackedStringArray("MandalaVisualizer")]
+script = ExtResource("2_idbah")
+MandalaVisualizer = NodePath("../Control/ResonatorDisplay/MandalaVisualizer")
+
+[node name="DisplayTimer" type="Timer" parent="Menara"]
+autostart = true
+
+[connection signal="timeout" from="Menara/DisplayTimer" to="Menara" method="_on_timer_timeout"]
