@@ -1,19 +1,22 @@
 using Godot;
 using System;
 using System.IO;
-public partial class frontend_manager_script : Control {
+namespace Menara.Cosmosia {
+    public partial class frontend_manager_script : Control {
 
-    // epxort objects (so it can control)
-    [Export]
-    public Control button;
+        // epxort objects (so it can control)
+        [Export]
+        public Control button;
 
-    // exported 
+        // exported 
 
-    public override void _Ready() {
+        public override void _Ready() {
 
-    }
-    
-    public override void _Process(double delta) {
+        }
+        
+        public override void _Process(double delta) {
 
+        }
     }
 }
+    
