@@ -18,7 +18,7 @@ public partial class midi_pulse_input_indicator : Control
     {
         _midiValue = midiValue;
         _intensity = intensity;
-        NoteNameLabel.Text = HarmonyHelper.ConvertMidiToNoteName(_midiValue);
+        NoteNameLabel.Text = HarmonyHelper.MidiToNoteName(_midiValue);
         IntensityLabel.Text = $"{_intensity} {IntensitySuffix}";
     }
 }

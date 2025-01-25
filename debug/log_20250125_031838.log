@@ -1,0 +1,35 @@
+2025-01-25 03:18:38 - Debugger session started.
+2025-01-25 03:18:38 - 
+Resonance: 0 | Inflow: 0 | Outflow: 0 | Overflow: 0
+- C3 | Intensity: 32
+
+False | False | False | False
+2025-01-25 03:18:39 - 
+Resonance: 0 | Inflow: 0 | Outflow: 0 | Overflow: 0
+- C3 | Intensity: 32
+
+False | False | False | False
+2025-01-25 03:18:39 - add success True - 11835498
+2025-01-25 03:18:39 - Midi Index: 69 | Intensity: 0 | Note Name: A4
+2025-01-25 03:18:40 - add success True - 8681889
+2025-01-25 03:18:40 - Midi Index: 69 | Intensity: 0 | Note Name: A4
+2025-01-25 03:18:40 - 
+Resonance: NaN | Inflow: 0 | Outflow: NaN | Overflow: 0
+- C3 | Intensity: 32
+- A4 | Intensity: 0
+- A4 | Intensity: 0
+
+- M13 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- M13 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- U | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+True | False | True | False
+2025-01-25 03:18:41 - 
+Resonance: NaN | Inflow: 0 | Outflow: NaN | Overflow: 0
+- C3 | Intensity: 32
+- A4 | Intensity: 0
+- A4 | Intensity: 0
+
+- M13 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- M13 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- U | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+True | False | True | False

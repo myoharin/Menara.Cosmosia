@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://invdncmt33k5"]
+
+[ext_resource type="Shader" path="res://assets/shaders/mandala_spatial.gdshader" id="1_o3n8j"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pq6sd"]
+render_priority = 0
+shader = ExtResource("1_o3n8j")
+shader_parameter/divisions = 12
+shader_parameter/radius = 0.3
+shader_parameter/activeMasks = PackedInt32Array(1, 4, 7, 8, 2, 4, -2)
+
+[sub_resource type="SphereMesh" id="SphereMesh_xqy1o"]
+lightmap_size_hint = Vector2i(17, 9)
+material = SubResource("ShaderMaterial_pq6sd")
+add_uv2 = true
+radial_segments = 17
+rings = 35
+
+[node name="Mandala3D" type="MeshInstance3D"]
+transform = Transform3D(4.485, 0, 0, 0, 4.485, 0, 0, 0, 0, 0, 0, 0)
+mesh = SubResource("SphereMesh_xqy1o")

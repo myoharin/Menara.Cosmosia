@@ -1,65 +1,76 @@
-[gd_scene load_steps=9 format=3 uid="uid://5ipmd3fx8j88"]
+[gd_scene load_steps=10 format=3 uid="uid://5ipmd3fx8j88"]
 
-[ext_resource type="Script" path="res://src/frontend_manager_script.cs" id="2_2biiu"]
+[ext_resource type="Shader" path="res://assets/shaders/mana_metre.gdshader" id="1_tpuf3"]
+[ext_resource type="Texture2D" uid="uid://48tm2fww7ao6" path="res://assets/image/shapes/circle_copper_#bf7040.png" id="2_7p5hc"]
 [ext_resource type="Script" path="res://src/menara_script.cs" id="2_idbah"]
 [ext_resource type="PackedScene" uid="uid://b7t1yo586f0ni" path="res://prefabs/Control/ResonatorParametersEditor.tscn" id="3_33tly"]
 [ext_resource type="PackedScene" uid="uid://cyc8f41ap7ad2" path="res://prefabs/Control/pulse_manager.tscn" id="3_tjq5o"]
 [ext_resource type="Shader" path="res://assets/shaders/mandala.gdshader" id="4_3tl8d"]
-[ext_resource type="Texture2D" uid="uid://cw86a0jsdkkvh" path="res://assets/image/shapes/square_sea green_#40bf60.png" id="5_6dnft"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ib3g4"]
-shader = ExtResource("4_3tl8d")
-shader_parameter/divisions = 12
-shader_parameter/radius = 0.3
-shader_parameter/activeMasks = PackedInt32Array(3, 2, 8, 12)
 
 [sub_resource type="Environment" id="Environment_b17vg"]
 background_mode = 1
-background_color = Color(0.701963, 0.65907, 0.765606, 1)
-background_energy_multiplier = 0.0
+background_color = Color(0.129118, 0.119594, 0.0737954, 1)
+background_energy_multiplier = 1.2
+ambient_light_color = Color(1, 1, 1, 1)
+reflected_light_source = 2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hr367"]
+shader = ExtResource("1_tpuf3")
+shader_parameter/timeMutiplier = 1.0
+shader_parameter/warpAmplitude = 1.0
+shader_parameter/outerCircleDiameter = 1.0
+shader_parameter/innerCircleDiameter = 0.93
+shader_parameter/manaCircleDiameter = 0.85
+shader_parameter/fillPercentage = 0.5
+shader_parameter/color = Vector3(0.705, 0.675, 0.8)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o2dyk"]
+shader = ExtResource("4_3tl8d")
+shader_parameter/divisions = 12
+shader_parameter/radius = 0.3
+shader_parameter/activeMasks = PackedInt32Array(1, 3, 5, -2, -4, -1)
 
 [node name="Scene" type="Node2D"]
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_2biiu")
+[node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Control"]
-
-[node name="ResonatorParametersEditor" parent="Control/CanvasLayer" instance=ExtResource("3_33tly")]
-offset_top = 20.0
-offset_bottom = 595.0
-CurrentParameter = 244215
-
-[node name="PulseManager" parent="Control/CanvasLayer" node_paths=PackedStringArray("Menara") instance=ExtResource("3_tjq5o")]
-offset_left = -880.0
-offset_top = 0.0
-offset_right = 0.0
-offset_bottom = 261.0
-Menara = NodePath("../../../Menara")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/CanvasLayer"]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_b17vg")
 
 [node name="ResonatorDisplay" type="Node2D" parent="."]
 
-[node name="MandalaVisualizer" type="Sprite2D" parent="ResonatorDisplay"]
-material = SubResource("ShaderMaterial_ib3g4")
-scale = Vector2(4.485, 4.485)
-texture = ExtResource("5_6dnft")
+[node name="ManaMetre2D" type="Sprite2D" parent="ResonatorDisplay"]
+material = SubResource("ShaderMaterial_hr367")
+scale = Vector2(2.935, 2.935)
+texture = ExtResource("2_7p5hc")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Mandala2D" type="Sprite2D" parent="ResonatorDisplay"]
+material = SubResource("ShaderMaterial_o2dyk")
+scale = Vector2(2.2, 2.2)
+texture = ExtResource("2_7p5hc")
 
-[node name="Menara" type="Node" parent="." node_paths=PackedStringArray("MandalaVisualizer")]
+[node name="Menara" type="Node" parent="." node_paths=PackedStringArray("ManaMetre", "MandalaVisualizer")]
 script = ExtResource("2_idbah")
-MandalaVisualizer = NodePath("../ResonatorDisplay/MandalaVisualizer")
+ManaMetre = NodePath("../ResonatorDisplay/ManaMetre2D")
+MandalaVisualizer = NodePath("../ResonatorDisplay/Mandala2D")
 
 [node name="DisplayTimer" type="Timer" parent="Menara"]
 autostart = true
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_b17vg")
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ResonatorParametersEditor" parent="CanvasLayer" instance=ExtResource("3_33tly")]
+offset_top = 20.0
+offset_bottom = 595.0
+CurrentParameter = 244215
+
+[node name="PulseManager" parent="CanvasLayer" node_paths=PackedStringArray("Menara") instance=ExtResource("3_tjq5o")]
+offset_left = -880.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 261.0
+Menara = NodePath("../../Menara")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer"]
 
 [connection signal="timeout" from="Menara/DisplayTimer" to="Menara" method="_on_timer_timeout"]

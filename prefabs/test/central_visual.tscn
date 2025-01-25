@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dq6aqvqjoq2vg"]
+
+[ext_resource type="Shader" path="res://assets/shaders/mana_metre.gdshader" id="1_8g3n1"]
+[ext_resource type="Texture2D" uid="uid://bhyx7wfwonija" path="res://assets/image/shapes/square_ink_#333333.png" id="2_h2p0a"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k27d8"]
+shader = ExtResource("1_8g3n1")
+shader_parameter/timeMutiplier = 1.0
+shader_parameter/warpAmplitude = 1.0
+shader_parameter/outerCircleDiameter = 1.0
+shader_parameter/innerCircleDiameter = 0.93
+shader_parameter/manaCircleDiameter = 0.85
+shader_parameter/fillPercentage = 0.5
+shader_parameter/color = Vector3(1.07, 1.47, 1.165)
+
+[node name="CentralVisual" type="Node2D"]
+
+[node name="ManaMetre" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_k27d8")
+texture = ExtResource("2_h2p0a")

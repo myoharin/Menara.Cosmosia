@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bec0k6p2ut4ew"]
 
-[ext_resource type="Shader" path="res://assets/shaders/structual_effects.gdshader" id="1_b7eti"]
+[ext_resource type="Shader" path="res://assets/shaders/pin_light_test.gdshader" id="1_b7eti"]
 [ext_resource type="Texture2D" uid="uid://diq70yx0uw0pk" path="res://assets/image/shapes/square_ruby_#bf409f.png" id="2_pq4yg"]
 [ext_resource type="Texture2D" uid="uid://48tm2fww7ao6" path="res://assets/image/shapes/circle_copper_#bf7040.png" id="3_uohl6"]
 
@@ -13,7 +13,7 @@ material = SubResource("ShaderMaterial_ggxa2")
 texture = ExtResource("2_pq4yg")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(-7, 0)
+position = Vector2(-2.00002, -5)
 rotation = 1.81406
 energy = 3.73
 texture = ExtResource("3_uohl6")

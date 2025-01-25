@@ -1,0 +1,218 @@
+2025-01-25 03:22:14 - Debugger session started.
+2025-01-25 03:22:14 - Midi Index: 48 | Intensity: 32 | Note Name: C3
+2025-01-25 03:22:14 - 
+Resonance: 0 | Inflow: 0 | Outflow: 0 | Overflow: 0
+- C3 | Intensity: 32
+
+False | False | False | False
+2025-01-25 03:22:15 - add success True - 6561143
+2025-01-25 03:22:15 - Midi Index: 69 | Intensity: 0 | Note Name: A4
+2025-01-25 03:22:15 - Midi Index: 48 | Intensity: 32 | Note Name: C3
+2025-01-25 03:22:15 - Midi Index: 69 | Intensity: 0 | Note Name: A4
+2025-01-25 03:22:15 - 
+Resonance: NaN | Inflow: NaN | Outflow: NaN | Overflow: NaN
+- C3 | Intensity: 32
+- A4 | Intensity: 0
+
+- M13 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: NaN
+True | True | True | True
+2025-01-25 03:22:16 - Midi Index: 48 | Intensity: 32 | Note Name: C3
+2025-01-25 03:22:16 - Midi Index: 69 | Intensity: 0 | Note Name: A4
+2025-01-25 03:22:16 - 
+Resonance: NaN | Inflow: NaN | Outflow: NaN | Overflow: NaN
+- C3 | Intensity: 32
+- A4 | Intensity: 0
+
+- M13 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: NaN
+True | True | True | True
+2025-01-25 03:22:17 - Midi Index: 48 | Intensity: 32 | Note Name: C3
+2025-01-25 03:22:17 - Midi Index: 69 | Intensity: 0 | Note Name: A4
+2025-01-25 03:22:17 - 
+Resonance: NaN | Inflow: NaN | Outflow: NaN | Overflow: NaN
+- C3 | Intensity: 32
+- A4 | Intensity: 0
+
+- M13 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: NaN
+True | True | True | True
+2025-01-25 03:22:18 - Midi Index: 48 | Intensity: 32 | Note Name: C3
+2025-01-25 03:22:18 - Midi Index: 69 | Intensity: 0 | Note Name: A4
+2025-01-25 03:22:18 - 
+Resonance: NaN | Inflow: NaN | Outflow: NaN | Overflow: NaN
+- C3 | Intensity: 32
+- A4 | Intensity: 0
+
+- M13 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: NaN
+True | True | True | True
+2025-01-25 03:22:19 - Midi Index: 48 | Intensity: 32 | Note Name: C3
+2025-01-25 03:22:19 - Midi Index: 69 | Intensity: 0 | Note Name: A4
+2025-01-25 03:22:19 - 
+Resonance: NaN | Inflow: NaN | Outflow: NaN | Overflow: NaN
+- C3 | Intensity: 32
+- A4 | Intensity: 0
+
+- M13 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: NaN
+True | True | True | True
+2025-01-25 03:22:20 - Midi Index: 48 | Intensity: 32 | Note Name: C3
+2025-01-25 03:22:20 - Midi Index: 69 | Intensity: 0 | Note Name: A4
+2025-01-25 03:22:20 - 
+Resonance: NaN | Inflow: NaN | Outflow: NaN | Overflow: NaN
+- C3 | Intensity: 32
+- A4 | Intensity: 0
+
+- M13 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: NaN
+True | True | True | True
+2025-01-25 03:22:21 - Midi Index: 48 | Intensity: 32 | Note Name: C3
+2025-01-25 03:22:21 - Midi Index: 69 | Intensity: 0 | Note Name: A4
+2025-01-25 03:22:21 - 
+Resonance: NaN | Inflow: NaN | Outflow: NaN | Overflow: NaN
+- C3 | Intensity: 32
+- A4 | Intensity: 0
+
+- M13 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: NaN
+True | True | True | True
+2025-01-25 03:22:22 - Midi Index: 48 | Intensity: 32 | Note Name: C3
+2025-01-25 03:22:22 - Midi Index: 69 | Intensity: 0 | Note Name: A4
+2025-01-25 03:22:22 - 
+Resonance: NaN | Inflow: NaN | Outflow: NaN | Overflow: NaN
+- C3 | Intensity: 32
+- A4 | Intensity: 0
+
+- M13 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: NaN
+True | True | True | True
+2025-01-25 03:22:23 - add success True - 13775211
+2025-01-25 03:22:23 - Midi Index: 69 | Intensity: 0 | Note Name: A4
+2025-01-25 03:22:23 - Midi Index: 48 | Intensity: 32 | Note Name: C3
+2025-01-25 03:22:23 - Midi Index: 69 | Intensity: 0 | Note Name: A4
+2025-01-25 03:22:23 - Midi Index: 69 | Intensity: 0 | Note Name: A4
+2025-01-25 03:22:23 - 
+Resonance: NaN | Inflow: 0 | Outflow: NaN | Overflow: 0
+- C3 | Intensity: 32
+- A4 | Intensity: 0
+- A4 | Intensity: 0
+
+- M13 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- M13 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- U | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+True | False | True | False
+2025-01-25 03:22:23 - add success True - 3231114
+2025-01-25 03:22:23 - Midi Index: 69 | Intensity: 0 | Note Name: A4
+2025-01-25 03:22:24 - Midi Index: 48 | Intensity: 32 | Note Name: C3
+2025-01-25 03:22:24 - Midi Index: 69 | Intensity: 0 | Note Name: A4
+2025-01-25 03:22:24 - Midi Index: 69 | Intensity: 0 | Note Name: A4
+2025-01-25 03:22:24 - Midi Index: 69 | Intensity: 0 | Note Name: A4
+2025-01-25 03:22:24 - 
+Resonance: NaN | Inflow: 0 | Outflow: NaN | Overflow: 0
+- C3 | Intensity: 32
+- A4 | Intensity: 0
+- A4 | Intensity: 0
+- A4 | Intensity: 0
+
+- M13 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- M13 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- U | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- M13 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- U | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- U | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+True | False | True | False
+2025-01-25 03:22:25 - delete success True - 13775211
+2025-01-25 03:22:25 - add success True - 13775211
+2025-01-25 03:22:25 - Midi Index: 70 | Intensity: 0 | Note Name: A#/Bb4
+2025-01-25 03:22:25 - delete success True - 13775211
+2025-01-25 03:22:25 - add success True - 13775211
+2025-01-25 03:22:25 - Midi Index: 71 | Intensity: 0 | Note Name: B4
+2025-01-25 03:22:25 - Midi Index: 48 | Intensity: 32 | Note Name: C3
+2025-01-25 03:22:25 - Midi Index: 69 | Intensity: 0 | Note Name: A4
+2025-01-25 03:22:25 - Midi Index: 69 | Intensity: 0 | Note Name: A4
+2025-01-25 03:22:25 - Midi Index: 71 | Intensity: 0 | Note Name: B4
+2025-01-25 03:22:25 - 
+Resonance: NaN | Inflow: 0 | Outflow: NaN | Overflow: 0
+- C3 | Intensity: 32
+- A4 | Intensity: 0
+- A4 | Intensity: 0
+- B4 | Intensity: 0
+
+- M13 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- M13 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- U | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- M14 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- M2 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- M2 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+True | False | True | False
+2025-01-25 03:22:26 - delete success True - 3231114
+2025-01-25 03:22:26 - add success True - 3231114
+2025-01-25 03:22:26 - Midi Index: 70 | Intensity: 0 | Note Name: A#/Bb4
+2025-01-25 03:22:26 - delete success True - 3231114
+2025-01-25 03:22:26 - add success True - 3231114
+2025-01-25 03:22:26 - Midi Index: 71 | Intensity: 0 | Note Name: B4
+2025-01-25 03:22:26 - Midi Index: 48 | Intensity: 32 | Note Name: C3
+2025-01-25 03:22:26 - Midi Index: 69 | Intensity: 0 | Note Name: A4
+2025-01-25 03:22:26 - Midi Index: 71 | Intensity: 0 | Note Name: B4
+2025-01-25 03:22:26 - Midi Index: 71 | Intensity: 0 | Note Name: B4
+2025-01-25 03:22:26 - 
+Resonance: NaN | Inflow: 0 | Outflow: NaN | Overflow: 0
+- C3 | Intensity: 32
+- A4 | Intensity: 0
+- B4 | Intensity: 0
+- B4 | Intensity: 0
+
+- m14 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- M14 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- M2 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- M14 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- M2 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- U | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+True | False | True | False
+2025-01-25 03:22:26 - delete success True - 3231114
+2025-01-25 03:22:26 - add success True - 3231114
+2025-01-25 03:22:26 - Midi Index: 83 | Intensity: 0 | Note Name: B5
+2025-01-25 03:22:26 - delete success True - 3231114
+2025-01-25 03:22:26 - add success True - 3231114
+2025-01-25 03:22:26 - Midi Index: 83 | Intensity: 0 | Note Name: B5
+2025-01-25 03:22:26 - delete success True - 3231114
+2025-01-25 03:22:26 - add success True - 3231114
+2025-01-25 03:22:26 - Midi Index: 83 | Intensity: 0 | Note Name: B5
+2025-01-25 03:22:27 - delete success True - 3231114
+2025-01-25 03:22:27 - add success True - 3231114
+2025-01-25 03:22:27 - Midi Index: 95 | Intensity: 0 | Note Name: B6
+2025-01-25 03:22:27 - delete success True - 3231114
+2025-01-25 03:22:27 - add success True - 3231114
+2025-01-25 03:22:27 - Midi Index: 95 | Intensity: 0 | Note Name: B6
+2025-01-25 03:22:27 - delete success True - 3231114
+2025-01-25 03:22:27 - add success True - 3231114
+2025-01-25 03:22:27 - Midi Index: 95 | Intensity: 0 | Note Name: B6
+2025-01-25 03:22:27 - Midi Index: 48 | Intensity: 32 | Note Name: C3
+2025-01-25 03:22:27 - Midi Index: 69 | Intensity: 0 | Note Name: A4
+2025-01-25 03:22:27 - Midi Index: 71 | Intensity: 0 | Note Name: B4
+2025-01-25 03:22:27 - Midi Index: 95 | Intensity: 0 | Note Name: B6
+2025-01-25 03:22:27 - 
+Resonance: NaN | Inflow: 0 | Outflow: NaN | Overflow: 0
+- C3 | Intensity: 32
+- A4 | Intensity: 0
+- B4 | Intensity: 0
+- B6 | Intensity: 0
+
+- m14 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- M14 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- M2 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- M28 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- M16 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- O2 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+True | False | True | False
+2025-01-25 03:22:28 - Midi Index: 48 | Intensity: 32 | Note Name: C3
+2025-01-25 03:22:28 - Midi Index: 69 | Intensity: 0 | Note Name: A4
+2025-01-25 03:22:28 - Midi Index: 71 | Intensity: 0 | Note Name: B4
+2025-01-25 03:22:28 - Midi Index: 95 | Intensity: 0 | Note Name: B6
+2025-01-25 03:22:28 - 
+Resonance: NaN | Inflow: 0 | Outflow: NaN | Overflow: 0
+- C3 | Intensity: 32
+- A4 | Intensity: 0
+- B4 | Intensity: 0
+- B6 | Intensity: 0
+
+- m14 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- M14 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- M2 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- M28 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- M16 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+- O2 | Intensity: 0 | Inflow: 0 | Outflow: NaN | Oveflow: 0
+True | False | True | False

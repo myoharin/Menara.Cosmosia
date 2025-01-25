@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using SineVita.Muguet;
 using System.Net.Http.Headers;
 namespace Menara.Cosmosia {
-		public partial class pulse_manager : VBoxContainer
+	public partial class pulse_manager : VBoxContainer
 	{
 
 		[Export]
@@ -29,16 +29,10 @@ namespace Menara.Cosmosia {
 		public string PulsePlayerPath = "res://prefabs/Control/pulse_player.tscn";
 		public double TimeSinceMidiAction = 0;
 
-		// Called when the node enters the scene tree for the first time.
-		public override void _Ready()
-		{
-			
-		}
-
 		// Called every frame. 'delta' is the elapsed time since the previous frame.
 		public override void _Process(double delta) {	
 			foreach (Node child in GetChildren()) {
-				if (child.Name != "PulsePlayerEditor" && child.Name != "MidiIndicators" && child.Name != "MidiEvenHandler") {
+				if (child is pulse_player) {
 					var pulse = ((pulse_player)child).Pulse;
 					var id = pulse.PulseID;
 					Menara.MutatePulse(id, pulse);
@@ -65,8 +59,6 @@ namespace Menara.Cosmosia {
 					child.QueueFree();
 				}
 			}
-
-
 		}
 
 		// * Midi Event handler
@@ -79,7 +71,7 @@ namespace Menara.Cosmosia {
 
 			var newIndicator = MidiPulseInputIndicatorScene.Instantiate();
 			newIndicator.Name = $"{pulse.PulseID}";
-			((Label)newIndicator.GetChild(1)).Text = HarmonyHelper.ConvertMidiToNoteName(midi_index);
+			((Label)newIndicator.GetChild(1)).Text = HarmonyHelper.MidiToNoteName(midi_index);
 			((Label)newIndicator.GetChild(1)).Text = pulse.Intensity.ToString();
 			MidiIndicatorContainer.AddChild(newIndicator);
 		}
@@ -94,8 +86,6 @@ namespace Menara.Cosmosia {
 			}
 			Menara.DeletePulse(id);
 		}
-
-
 
 		// * Pulse Player
 
@@ -115,7 +105,7 @@ namespace Menara.Cosmosia {
 
 		public void DeleteAllPulsePlayer() {
 			foreach (Node child in GetChildren()) {
-				if (child.Name != "PulsePlayerEditor" && child.Name != "MidiIndicators") {
+				if (child is pulse_player) {
 					((pulse_player)child)._on_delete_button_button_up();
 				}
 			}
@@ -124,10 +114,6 @@ namespace Menara.Cosmosia {
 		public void MutatePulsePlayerNote(Pulse pulse) {
 			Menara.DeletePulse(pulse.PulseID);
 			Menara.AddPulse(pulse);
-		}
-
-		public void RecieveMidiMessages() { // handle midi messgae
-
 		}
 	}
 }
