@@ -31,8 +31,7 @@ namespace Menara.Cosmosia {
 		public override void _Ready() {
 			ResonanceHelper.ParametersFolderPath = ResonatorParameterPath; // replace static 
 			_resonator = new ResonatorCosmosia(244215);
-			var testBasil = new BasilMuguetCosmosia();
-			BasilMuguetCosmosia.DebugFolder = "debug";
+			BasilMuguetCosmosia.DebugFolder = null; // set to null to disable debug
 		}
 
 		// * Processes
@@ -40,14 +39,7 @@ namespace Menara.Cosmosia {
 			_process_UpdateMuguet(delta * TimeScale);
 			_process_UpdateMandala(delta);	
 			_process_UpdateManaMetre(delta);
-		}
-		private void _process_Debug(double delta) { // not in use
-			GD.Print($" - - {_resonator.Lonicera.NodeCount} nodes total - - ");
-			foreach (CosmosiaPulse pulse in _resonator.Lonicera.Nodes) {
-				GD.Print($"{pulse.PulseID} | {pulse.Pitch.NoteName} | {pulse.Intensity}");
-			}
-			GD.Print(_resonator.Resonance);
-
+			BasilMuguetCosmosia.LogResonatorIdyll(_resonator);
 		}
 		private void _process_UpdateMuguet(double delta) {
 			if (delta > 0) {_resonator.Process(delta);}

@@ -15,7 +15,8 @@ namespace Menara.Cosmosia {
     public partial class midi_event_handler : Node {
         [Export]
         public pulse_manager PulseManager;
-
+        [Export]
+        public float HeldDurationCull = 2.0f;
         // Dictionary to keep track of note statuses
         public Dictionary<int, MidiNoteStatus> NoteStatus = new Dictionary<int, MidiNoteStatus>();
 
@@ -31,7 +32,15 @@ namespace Menara.Cosmosia {
             InputEventMidi midiEvent = (InputEventMidi)inputEvent;
 
             // Handle note on/off events
-            if (midiEvent.Message == (MidiMessage)9) {
+            
+            if (midiEvent.Message == (MidiMessage)8) { // delete em notes
+                if (NoteStatus.ContainsKey(midiEvent.Pitch)) {
+                    var status = NoteStatus[midiEvent.Pitch];
+                    NoteStatus.Remove(status.PulseId);
+                    PulseManager.MidiRemoveNote(status.PulseId);
+                }
+            }
+            else if (midiEvent.Message == (MidiMessage)9) {
                 int newId = new Random().Next();
                 NoteStatus[midiEvent.Pitch] = new MidiNoteStatus {
                     IsOn = true,
@@ -67,7 +76,7 @@ namespace Menara.Cosmosia {
                 var status = NoteStatus[key];
                 status.HeldDuration += (float)delta;
                 status.AdsrVelocity = AdsrModule.AdsrInterpolate(status.HeldDuration, true); // replace with adsr calculation
-                if (status.AdsrVelocity == 0) {
+                if (status.AdsrVelocity <= 3 || status.HeldDuration >= HeldDurationCull) {
                     PulseManager.MidiRemoveNote(status.PulseId);
                     NoteStatus.Remove(key);
                 } else {
