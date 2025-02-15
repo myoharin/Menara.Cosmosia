@@ -77,25 +77,18 @@ namespace Menara.Cosmosia {
 				message += $"\n- {channel.Interval.IntervalName} | Intensity: {channel.Intensity} | Inflow: {Math.Round(channel.RawInflowRate,2)} | Outflow: {Math.Round(channel.OutflowRate,2)} | Oveflow: {Math.Round(channel.OverflowRate,2)}";
 			}
 			message += $"\n{float.IsNaN(Resonator.Resonance)} | {float.IsNaN(Resonator.NetInflow)} | {float.IsNaN(Resonator.NetOutflow)} | {float.IsNaN(Resonator.NetOverflow)}";
-			GD.Print(message);
-			BasilMuguet.Log(message);
 		}
 
 		// * ResonatorCosmosia Stuff
 		public void AddPulse(Pulse pulse) {
 			var success = _resonator.AddPulse(pulse); 
 			var message = $"add success {success} - {pulse.PulseID}";
-			GD.Print(message);
-			BasilMuguet.Log(message);
-			BasilMuguetCosmosia.LogPulse(pulse);
 		}
 		public void DeletePulse(int id) {
 			var success = _resonator.DeletePulse(id); 
 			var message = $"delete success {success} - {id}";
-			GD.Print(message);
-			BasilMuguet.Log(message);
 		}
-		public void MutatePulse(int id, Pulse newPulse) {var success = _resonator.MutatePulse(id, newPulse);}// GD.Print($"mutate success {success}");}
+		public void MutatePulse(int id, Pulse newPulse) {var success = _resonator.MutatePulse(id, newPulse);}
 	}
 }
 
